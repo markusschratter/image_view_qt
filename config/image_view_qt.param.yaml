@@ -1,0 +1,20 @@
+/image_view_front_qt_node:
+  ros__parameters:
+    show_startup: true
+    stay_on_top: true
+    use_compressed: true
+    image_topic: "/image_raw"
+    compressed_image_topic: "/image_raw/compressed"
+    visualization_service: "/visualization"
+    visualization_topic: "/visualization"
+    pos_x: 0
+    pos_y: 0
+    width: 800
+    height: 600
+
+    roi_x: 0
+    roi_y: 0
+    roi_width: -1  # -1 for full width
+    roi_height: -1  # -1 for full height
+    position: "top:center"
+    screen_index: 1

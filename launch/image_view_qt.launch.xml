@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="params_file"  default="$(find-pkg-share image_view_qt)/config/image_view_qt.param.yaml"/>
+    <node pkg="image_view_qt" exec="image_view_qt" name="image_view_front_qt_node" output="screen">
+       <param from="$(var params_file)"/>
+    </node>
+
+</launch>
+
+
