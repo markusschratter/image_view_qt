@@ -1,7 +1,7 @@
 
-# **Image View QT**
+# **image_view_qt**
 
-The **Image View QT** is a ROS 2-based graphical application for visualizing raw or compressed images in a frameless QT window. It is designed to be highly configurable, enabling users to adjust display settings, crop regions of interest (ROI), control window positioning, and toggle visualization dynamically.
+The **image_view_qt** is a ROS based graphical application for visualizing raw or compressed images in a frameless QT window. It is designed to be highly configurable, enabling users to adjust display settings, crop regions of interest (ROI), control window positioning, and toggle visualization dynamically.
 
 ---
 
