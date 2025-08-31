@@ -20,6 +20,12 @@ ament_auto_add_library(image_view_qt_lib SHARED
   src/image_view_qt.cpp
 )
 
+ament_auto_add_executable(image_view_birds_eye_node
+  src/image_view_birds_eye.cpp
+)
+ament_auto_add_library(image_view_birds_eye_lib SHARED
+  src/image_view_birds_eye.cpp
+)
 
 ament_auto_package(INSTALL_TO_SHARE
   launch

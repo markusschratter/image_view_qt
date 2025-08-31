@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="node_name"           default="image_view_birds_eye_node"/>
+    <arg name="namespace"           default=""/>
+
+    <arg name="image_topic"         default="/sensing/camera/front/image_raw/compressed"/>
+    <arg name="camera_info_topic"   default="/sensing/camera/front/camera_info"/>
+    <arg name="output_topic"        default="/sensing/camera/front/birds_eye/image_raw"/>
+
+    <arg name="camera_frame"        default="camera_front"/>
+    <arg name="target_frame"        default="base_link"/>
+
+    <!-- Output size -->
+    <arg name="output_width"        default="500"/>
+    <arg name="output_height"       default="1000"/>
+
+    <!-- Ground-plane bounds (meters) -->
+    <arg name="ground_x_min"        default="0.0"/>
+    <arg name="ground_x_max"        default="20.0"/>
+    <arg name="ground_y_min"        default="-5.0"/>
+    <arg name="ground_y_max"        default="5.0"/>
+
+    <node pkg="image_view_qt" exec="image_view_birds_eye_node" name="$(var node_name)" output="screen">
+
+        <!-- Parameters passed to the node -->
+        <param name="image_topic"         value ="$(var image_topic)"/>
+        <param name="camera_info_topic"   value ="$(var camera_info_topic)"/>
+        <param name="output_topic"        value ="$(var output_topic)"/>
+
+        <param name="camera_frame"        value ="$(var camera_frame)"/>
+        <param name="target_frame"        value ="$(var target_frame)"/>
+
+        <!-- Vector parameter (YAML list as string) -->
+        <param name="output_size"         value ="[ $(var output_width), $(var output_height) ]"/>
+
+        <param name="ground_x_min"        value ="$(var ground_x_min)"/>
+        <param name="ground_x_max"        value ="$(var ground_x_max)"/>
+        <param name="ground_y_min"        value ="$(var ground_y_min)"/>
+        <param name="ground_y_max"        value ="$(var ground_y_max)"/>
+
+    </node>
+
+</launch>
+
+
